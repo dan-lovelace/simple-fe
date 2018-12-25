@@ -1,7 +1,5 @@
 import './styles/App.scss';
 
-const ele = document.getElementById('button');
-
-ele.addEventListener('click', () => {
+document.getElementById('button').addEventListener('click', () => {
   console.log('Clicked');
 });
