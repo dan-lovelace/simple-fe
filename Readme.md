@@ -1,6 +1,6 @@
 # `simple-fe`
 
-A barebones webpack boilerplate
+A barebones webpack boilerplate project to quickly begin running Javascript in-browser using the latest syntax
 
 ## Features
 - Babel 7
