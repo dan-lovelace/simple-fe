@@ -1,25 +1,35 @@
-Yet another barebones webpack project... ES6, Sass, hot reloading...
+# `simple-fe`
 
-### Installation
+A barebones webpack boilerplate
 
-Clone the project
-```
-git clone https://github.com/dan-lovelace/simple-fe.git
-```
+## Features
+- Babel 7
+- Sass
+- Development server
+- Hot reload
+- Sourcemaps during development
+- Image loading optimization
 
-In the root directory, run:
+## Installation
+
 ```
 npm install
 ```
 
-### Usage
+## Usage
 
-Development
+##### Development
+
 ```
 npm start
 ```
 
-Build
+Default location is http://localhost:8080. HTML entry: `./src/index.html`, JS: `./src/index.js`.
+
+##### Production
+
 ```
 npm run build
 ```
+
+Creates a `dist` directory with the output.

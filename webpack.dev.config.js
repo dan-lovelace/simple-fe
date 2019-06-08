@@ -11,7 +11,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/i,
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
@@ -19,7 +19,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(scss|css)$/,
+        test: /\.(scss|css)$/i,
         use: [
           {
             // creates style nodes from JS strings
@@ -48,7 +48,7 @@ module.exports = {
       },
       {
         // Load all images as base64 encoding if they are smaller than 8192 bytes
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jp(e*)g|gif|svg)$/i,
         use: [
           {
             loader: 'url-loader',
@@ -64,7 +64,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html',
+      template: './src/index.html',
       inject: true
     })
   ]
