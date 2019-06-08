@@ -8,6 +8,7 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist')
   },
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -20,34 +21,10 @@ module.exports = {
       },
       {
         test: /\.(scss|css)$/i,
-        use: [
-          {
-            // creates style nodes from JS strings
-            loader: "style-loader",
-            options: {
-              sourceMap: true
-            }
-          },
-          {
-            // translates CSS into CommonJS
-            loader: "css-loader",
-            options: {
-              sourceMap: true
-            }
-          },
-          {
-            // compiles Sass to CSS
-            loader: "sass-loader",
-            options: {
-              outputStyle: 'expanded',
-              sourceMap: true,
-              sourceMapContents: true
-            }
-          }
-        ]
+        use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
-        // Load all images as base64 encoding if they are smaller than 8192 bytes
+        // load all images as base64 encoding if they are smaller than 8192 bytes
         test: /\.(png|jp(e*)g|gif|svg)$/i,
         use: [
           {

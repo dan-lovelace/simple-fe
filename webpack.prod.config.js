@@ -23,7 +23,7 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
-        // Load all images as base64 encoding if they are smaller than 8192 bytes
+        // load all images as base64 encoding if they are smaller than 8192 bytes
         test: /\.(png|jp(e*)g|gif|svg)$/,
         use: 'url-loader',
       },
